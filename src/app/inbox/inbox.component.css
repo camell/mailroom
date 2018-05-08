@@ -1,3 +1,33 @@
+.sidenav-start {
+  
+}
+
+.sidenav-end {
+  width: 200px;
+  background-color: black;
+}
+
+.event-card {
+  max-width: 200px;
+}
+
+.example-event-image {
+  background-image: url('https://storage.googleapis.com/interdependent.studio/sample-event-image.png');
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .red-role-icon {
   color: red;
 }
