@@ -22,6 +22,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatListModule } from '@angular/material/list';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatCheckboxModule,
     MatBadgeModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatListModule,
+    OverlayModule
   ],
   exports: [
     MatSidenavModule,
@@ -72,8 +76,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatCheckboxModule,
     MatBadgeModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatListModule,
+    OverlayModule
   ],
+  providers: [],
   declarations: []
 })
 export class MailroomMaterialModule { }

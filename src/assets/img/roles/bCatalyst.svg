@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="489px" height="572px" viewBox="0 0 489 572" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Catalyst</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Catalyst-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="B&amp;W-Catalyst" transform="translate(-296.000000, -18.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Catalyst" transform="translate(296.000000, 18.000000)">
+                <ellipse id="Head_19_" cx="244" cy="179" rx="180" ry="179"></ellipse>
+                <g id="Bubbles_2_" transform="translate(0.000000, 273.000000)">
+                    <path d="M173,187 C147.607757,187 127,166.418095 127,141 C127,115.581905 147.607757,95 173,95 C198.392243,95 219,115.581905 219,141 C219,166.418095 198.392243,187 173,187 Z M173,167 C187.37224,167 199,155.346381 199,141 C199,126.653619 187.37224,115 173,115 C158.62776,115 147,126.653619 147,141 C147,155.346381 158.62776,167 173,167 Z" id="Head_10_"></path>
+                    <path d="M315.5,135 C301.42364,135 290,123.590238 290,109.5 C290,95.4097623 301.42364,84 315.5,84 C329.57636,84 341,95.4097623 341,109.5 C341,123.590238 329.57636,135 315.5,135 Z M316,124 C324.291272,124 331,117.501264 331,109.5 C331,101.498736 324.291272,95 316,95 C307.708728,95 301,101.498736 301,109.5 C301,117.501264 307.708728,124 316,124 Z" id="Head_6_"></path>
+                    <ellipse id="Head_5_" cx="252.5" cy="196" rx="19.5" ry="19"></ellipse>
+                    <circle id="Head_4_" cx="39.5" cy="39.5" r="39.5"></circle>
+                    <circle id="Head_3_" cx="449.5" cy="39.5" r="39.5"></circle>
+                    <circle id="Head_1_" cx="219" cy="271" r="28"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

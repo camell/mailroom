@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MailroomMaterialModule } from './mailroom-material/mailroom-material.module';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef} from '@angular/core';
+import { InboxComponent } from './inbox/inbox.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 }
