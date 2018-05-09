@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +20,7 @@ import { InboxComponent } from './inbox/inbox.component';
     InboxComponent
   ],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     MailroomMaterialModule
