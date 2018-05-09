@@ -9,8 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MailroomMaterialModule } from './mailroom-material/mailroom-material.module';
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { InboxComponent } from './inbox/inbox.component';
 
