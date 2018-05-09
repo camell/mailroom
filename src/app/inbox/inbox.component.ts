@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MailroomMaterialModule } from '../mailroom-material/mailroom-material.module';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -19,8 +19,9 @@ private _mobileQueryListener: () => void;
   iconRegistry
     .addSvgIcon(
         'thumbs-up',
-        sanitizer.bypassSecurityTrustResourceUrl('/Users/CGt/Interdependent/mailroom/src/assets/img/roles/thumbs-up.svg'))
-    .addSvgIconLiteral('bike',
+        sanitizer.bypassSecurityTrustResourceUrl('./assets/img/roles/thumbs-up.svg'))
+
+    .addSvgIconLiteral('Catalyst',
             sanitizer.bypassSecurityTrustHtml(CATALYST_ICON))
 
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
