@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FilePreviewOverlayService } from '../file-preview-overlay.service';
+
+import { FilePreviewOverlayRef } from '../file-preview-overlay-ref';
+
+import { STATIC_FILE_DATE } from '../data';
 
 @Component({
   selector: 'app-season-zero-for-your-consideration',
   templateUrl: './season-zero-for-your-consideration.component.html',
   styleUrls: ['./season-zero-for-your-consideration.component.css']
 })
-export class SeasonZeroForYourConsiderationComponent implements OnInit {
+export class SeasonZeroForYourConsiderationComponent {
+  files = STATIC_FILE_DATE;
 
-  constructor() { }
+  constructor(private previewDialog: FilePreviewOverlayService) { }
 
-  ngOnInit() {
+  showPreview(file) {
+    let dialogRef: FilePreviewOverlayRef = this.previewDialog.open({
+      image: file
+    });
   }
-
 }
+
