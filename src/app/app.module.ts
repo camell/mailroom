@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -33,6 +34,8 @@ import { SeasonZeroForYourConsiderationComponent } from './season-zero-for-your-
     MailroomMaterialModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
+
   ],
   providers: [
   FilePreviewOverlayService
@@ -41,3 +44,5 @@ import { SeasonZeroForYourConsiderationComponent } from './season-zero-for-your-
   entryComponents: [ FilePreviewOverlayComponent ]
 })
 export class AppModule { }
+
+
