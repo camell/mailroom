@@ -30,162 +30,29 @@
   </mat-sidenav>
   
   <mat-sidenav-content>
+ 
   
-  
-  <mat-list>
-  <mat-list-item *ngFor="let file of files">
-    <mat-icon mat-list-icon>insert_drive_file</mat-icon>
-    {{ file.name }}
-    <button mat-icon-button (click)="showPreview(file)">
-      <mat-icon mat-list-icon>visibility</mat-icon>
-    </button>
-  </mat-list-item>
-</mat-list>
  
   <body>
   
   <mat-toolbar><p>FOR YOUR CONSIDERATION</p></mat-toolbar>
   
-  <mat-expansion-panel [disabled]="isDisabled" [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      AMERICA'S GUEST
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>“When filming a movie on location, John Belushi had a habit
-of wandering off-set to a random house of a complete
-stranger. He would knock on their front door, invite himself
-in, and then ask for something to eat.
-This practice prompted Dan Aykroyd to affectionately dub
-Belushi ‘America’s Guest.’”</p>
-<a mat-button >PASS</a>
-<a mat-button >CONSIDER</a>
-<a mat-button>CONTRIBUTE</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      WASTED SPACE
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>What happens when aliens abduct a young junkie who gets them hooked on drugs? A whimsical and terrifying urban adventure. An unlikely family of denizens tries to make it through this surreal trip.
-</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      SERE
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>A disparate group of strangers is abandoned in the desert locked in the trailer of a semi-truck. 
-They fight for survival from the elements and each other as they uncover the mystery of their fatal imprisonment.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title >
-      CHASING THE HORIZON
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>An anti-social, has-been writer is forced to write a biography of an old man. The writer confronts his disillusionment
-when the old man tells him the story of the 1912 failed parachute jump of Franz Reichelt.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      POLYBIUS
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>During the video arcade culture of the 1980s, otherworldly forces contrive to control a community by programming kids 
-through video games. But a bunch of smart, misfit kids set about uncovering the conspiracy and saving the town.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title >
-      THE LAST INDIAN WAR
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>An epic coming-of-age historical drama about the forced relocation of Native American children and the birth of modern football.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      BONJOUR L.A.
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>Romantic comedy follows a group of French tourists for one week in L.A. Their tour guide, a frustrated actress, breaks the unwritten rule and falls in love with one customers. A love poem to L.A. </p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      CHARLOTTE SOMETIMES
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>Out of the limelight for 25 years, a fiery actress turned barfly is about to mount a comeback when her arch nemesis and the love of her life shows up on her doorstep.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      MUSKOGEE
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>Three clueless filmmakers attend a film festival in rural Oklahoma, but quickly come to realize there's something off about this town - will they realize what's going on in time?</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      THE TALLEST DARKEST LEADING MAN IN HOLLYWOOD
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <p>It's the hard-to-believe but never-the-less true story of Hollywood's first blockbuster, King Kong, and the unlikely love triangle...</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
-
-<br>
-
-<mat-expansion-panel [hideToggle]="true">
-  <mat-expansion-panel-header [collapsedHeight]="'75px'">
-    <mat-panel-title>
-      TRENDING
-    </mat-panel-title>
+<mat-expansion-panel [disabled]="isDisabled" [hideToggle]="true" *ngFor="let panel of config.panels">
+  
+    <mat-expansion-panel-header [collapsedHeight]="'75px'">
+      <mat-panel-title>
+        {{ panel.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ panel.description }}
+      </mat-panel-description>
     </mat-expansion-panel-header>
-  <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
-<a mat-button (click)=overlay.create()>CONSIDER</a>
-</mat-expansion-panel>
+    <p>Panel content goes here</p>
+  </mat-expansion-panel>
+
+<br>
+
+
 
   </body>
  

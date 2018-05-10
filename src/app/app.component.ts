@@ -6,14 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-config = {
-    panels: [
-      { name: 'AMERICAS GUEST', description: '' },
-      { name: 'WASTED SPACE', description: '' },
-      { name: 'SERE', description: '' }
-    ]
-  };
-}
+export class AppComponent { }
 
 

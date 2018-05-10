@@ -30,6 +30,23 @@ const CATALYST_ICON = `
   styleUrls: ['./inbox.component.css']
 })
 export class InboxComponent {
+  config = {
+    panels: [
+
+      { name: 'AMERICAS GUEST', description: '' },
+      { name: 'WASTED SPACE', description: ''},
+      { name: 'SERE', description: '' },
+      { name: 'CHASING THE HORIZON', description: '' },
+      { name: 'POLYBIUS', description: ''},
+      { name: 'THE LAST INDIAN WAR', description: '' },
+      { name: 'BONJOUR L.A.', description: '' },
+      { name: 'CHARLOTTE SOMETIMES', description: ''},
+      { name: 'MUSKOGEE', description: '' },
+      { name: 'THE TALLEST DARKEST LEADING MAN IN HOLLYWOOD', description: '' },
+      { name: 'TRENDING', description: ''},
+    ]
+  };
+
   files = STATIC_FILE_DATE;
 
   mobileQuery: MediaQueryList;
