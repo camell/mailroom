@@ -1,5 +1,12 @@
 @import 'mailroom-theme.scss';
 
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  &.dark-backdrop {
+    background: #000;
+    opacity: 0.85 !important;
+  }
+}
+
 .mat-expansion-panel-header-title, 
 .mat-expansion-panel-header-description {
   flex-basis: 0;
