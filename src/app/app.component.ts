@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MailroomMaterialModule } from './mailroom-material/mailroom-material.module';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef} from '@angular/core';
-import { InboxComponent } from './inbox/inbox.component';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
