@@ -37,6 +37,16 @@
   
   <mat-toolbar><p>FOR YOUR CONSIDERATION</p></mat-toolbar>
   
+  <mat-list>
+  <mat-list-item *ngFor="let file of files">
+    <mat-icon mat-list-icon>insert_drive_file</mat-icon>
+    {{ file.name }}
+    <button mat-icon-button (click)="showPreview(file)">
+      <mat-icon mat-list-icon>visibility</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+  
 <mat-expansion-panel [disabled]="isDisabled" [hideToggle]="true" *ngFor="let panel of config.panels">
   
     <mat-expansion-panel-header [collapsedHeight]="'75px'">
@@ -48,6 +58,9 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>Panel content goes here</p>
+    <a mat-button >PASS</a>
+<a mat-button (click)="showPreview(file)">CONSIDER</a>
+<a mat-button>CONTRIBUTE</a>
   </mat-expansion-panel>
 
 <br>
