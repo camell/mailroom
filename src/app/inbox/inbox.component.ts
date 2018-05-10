@@ -5,6 +5,10 @@ import { ChangeDetectorRef } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
+import { FilePreviewOverlayService } from '../file-preview-overlay.service';
+import { FilePreviewOverlayRef } from '../file-preview-overlay-ref';
+import { STATIC_FILE_DATE } from '../data';
+
 const CATALYST_ICON = `
 
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -26,11 +30,14 @@ const CATALYST_ICON = `
   styleUrls: ['./inbox.component.css']
 })
 export class InboxComponent {
+  files = STATIC_FILE_DATE;
+
   mobileQuery: MediaQueryList;
 
 private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(private previewDialog: FilePreviewOverlayService,
+    changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
   iconRegistry
     .addSvgIcon(
         'thumbs-up',
@@ -43,6 +50,12 @@ private _mobileQueryListener: () => void;
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
 
+  }
+
+  showPreview(file) {
+    let dialogRef: FilePreviewOverlayRef = this.previewDialog.open({
+      image: file
+    });
   }
 
   ngOnDestroy(): void {

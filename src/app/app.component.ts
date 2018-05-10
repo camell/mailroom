@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+config = {
+    panels: [
+      { name: 'AMERICAS GUEST', description: '' },
+      { name: 'WASTED SPACE', description: '' },
+      { name: 'SERE', description: '' }
+    ]
+  };
 }
+
+
