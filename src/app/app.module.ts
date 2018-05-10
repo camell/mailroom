@@ -11,11 +11,17 @@ import { MailroomMaterialModule } from './mailroom-material/mailroom-material.mo
 
 import { AppComponent } from './app.component';
 import { InboxComponent } from './inbox/inbox.component';
+import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
+import { FilePreviewOverlayToolbarComponent } from './file-preview-overlay-toolbar/file-preview-overlay-toolbar.component';
+import { SeasonZeroForYourConsiderationComponent } from './season-zero-for-your-consideration/season-zero-for-your-consideration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InboxComponent
+    InboxComponent,
+    FilePreviewOverlayComponent,
+    FilePreviewOverlayToolbarComponent,
+    SeasonZeroForYourConsiderationComponent
   ],
   imports: [
     FlexLayoutModule,
