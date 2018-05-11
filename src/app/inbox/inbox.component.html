@@ -31,30 +31,18 @@
   
   <mat-sidenav-content>
  
-  
- 
   <body>
   
   <mat-toolbar><p>FOR YOUR CONSIDERATION</p></mat-toolbar>
   
-  <mat-list>
-  <mat-list-item *ngFor="let file of files">
-    <mat-icon mat-list-icon>insert_drive_file</mat-icon>
-    {{ file.name }}
-    <button mat-icon-button (click)="showPreview(file)">
-      <mat-icon mat-list-icon>visibility</mat-icon>
-    </button>
-  </mat-list-item>
-</mat-list>
-  
-<mat-expansion-panel [disabled]="isDisabled" [hideToggle]="true" *ngFor="let panel of config.panels">
+<mat-expansion-panel [disabled]="isDisabled" [hideToggle]="true" *ngFor="let file of files">
   
     <mat-expansion-panel-header [collapsedHeight]="'75px'">
       <mat-panel-title>
-        {{ panel.name }}
+        {{ file.name }}
       </mat-panel-title>
       <mat-panel-description>
-        {{ panel.description }}
+        {{ file.description }}
       </mat-panel-description>
     </mat-expansion-panel-header>
     <p>Panel content goes here</p>
