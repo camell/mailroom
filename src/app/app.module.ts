@@ -15,6 +15,8 @@ import { ScreenplaySwiperComponent } from './screenplay-swiper/screenplay-swiper
 
 import { SwiperModule, SwiperConfigInterface,
   SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
   const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     observer: true,
@@ -36,7 +38,8 @@ import { SwiperModule, SwiperConfigInterface,
     FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MailroomMaterialModule
+    MailroomMaterialModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
