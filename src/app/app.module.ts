@@ -32,12 +32,18 @@ import { SwiperModule, SwiperConfigInterface,
     ScreenplaySwiperComponent
   ],
   imports: [
+    SwiperModule,
     FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     MailroomMaterialModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
