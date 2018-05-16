@@ -11,11 +11,13 @@ import { MailroomMaterialModule } from './mailroom-material/mailroom-material.mo
 
 import { AppComponent } from './app.component';
 import { InboxComponent } from './inbox/inbox.component';
+import { ScreenplaySwiperComponent } from './screenplay-swiper/screenplay-swiper.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InboxComponent
+    InboxComponent,
+    ScreenplaySwiperComponent
   ],
   imports: [
     FlexLayoutModule,
