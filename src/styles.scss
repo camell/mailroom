@@ -1,5 +1,23 @@
 @import 'mailroom-theme.scss';
 
+.Regular { 
+	font-family: EurostileNextW1G-Regular;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.Bold { 
+	font-family: EurostileNextW1G-Regular;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.Light { 
+	font-family: EurostileNextW1G-Light;
+	font-weight: normal;
+	font-style: normal;
+}
+
 .mat-expansion-panel-header-title, 
 .mat-expansion-panel-header-description {
   flex-basis: 0;
