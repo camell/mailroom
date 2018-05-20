@@ -10,6 +10,7 @@ $mailroom-theme: mat-light-theme($mailroom-theme-primary, $mailroom-theme-accent
 
 @include angular-material-theme($mailroom-theme);
 
+
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
@@ -20,8 +21,5 @@ $custom-light-typography: mat-typography-config(
   $font-family: '"EurostileNextW1G-Light"',
 );
 
-// Override typography for a specific Angular Material components.
-@include mat-card-typography($custom-light-typography);
-
-// Override the typography in the core CSS.
-@include mat-core();
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include mat-core($custom-typography);
