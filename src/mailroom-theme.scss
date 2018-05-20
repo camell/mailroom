@@ -1,7 +1,5 @@
 @import '~@angular/material/theming';
 
-
-
 $mailroom-theme-primary: mat-palette($mat-red);
 $mailroom-theme-accent:  mat-palette($mat-red, A200, A100, A400);
 
@@ -21,3 +19,9 @@ $custom-typography: mat-typography-config(
 $custom-light-typography: mat-typography-config(
   $font-family: '"EurostileNextW1G-Light"',
 );
+
+// Override typography for a specific Angular Material components.
+@include mat-card-typography($custom-light-typography);
+
+// Override the typography in the core CSS.
+@include mat-core();
