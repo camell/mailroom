@@ -22,4 +22,4 @@ $custom-light-typography: mat-typography-config(
 );
 
 // Override typography for all Angular Material, including mat-base-typography and all components.
-@include mat-core($custom-typography);
+@include angular-material-typography($custom-typography);
