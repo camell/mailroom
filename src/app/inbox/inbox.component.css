@@ -1,5 +1,4 @@
 .sidenav-start {
-  
 }
 
 .sidenav-end {
@@ -41,10 +40,12 @@
 
 }
 
-.example-is-mobile .example-toolbar {
+.mat-toolbar.mat-primary{
   position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
 }
 
 h1.example-app-name {
