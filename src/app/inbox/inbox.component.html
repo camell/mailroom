@@ -1,15 +1,21 @@
-<mat-toolbar color="primary" layout="row" style="position: fixed;">
-  <button mat-icon-button (click)="snavStart.toggle()"><mat-icon>menu</mat-icon></button>
+<div fxLayout="row">
+
+  <mat-toolbar color="primary" layout="row" style="position: fixed;">
+ 
+<div><button mat-icon-button (click)="snavStart.toggle()">
+<mat-icon>menu</mat-icon></button></div>
   
-  <mat-icon svgIcon="Catalyst" class="red-role-icon"></mat-icon>
-    
-    mailroom
+<div fxFlexOffset="1vw"><mat-icon  svgIcon="Catalyst" class="red-role-icon"></mat-icon></div>
+<div fxFlexOffset="1vw">mailroom</div>
+
+   
 
 <!-- This fills the remaining space of the current row -->
  <span class="fill-remaining-space"></span>
 
   <span><button mat-icon-button (click)="snavEnd.toggle()"><mat-icon>menu</mat-icon></button></span>
 </mat-toolbar>
+</div>
 
 <mat-sidenav-container fullscreen class="example-sidenav-container"
 [style.marginTop.px]="56">
@@ -31,10 +37,13 @@
   </mat-sidenav>
   
   <mat-sidenav-content>
-  <body>
+ 
   
-  <p class="Regular">FOR YOUR CONSIDERATION</p>
+  <div fxLayout="row">
+  <p fxFlexOffset="30px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR CONSIDERATION</p>
+  </div>
   
+  <div fxLayout="column" [style.marginTop.px]="0" [style.marginLeft.px]="20" [style.marginRight.px]="20">
   <mat-expansion-panel [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
@@ -52,9 +61,9 @@ Belushi ‘America’s Guest.’”</p>
 <a mat-button>CONTRIBUTE</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       WASTED SPACE
@@ -65,9 +74,9 @@ Belushi ‘America’s Guest.’”</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       SERE
@@ -78,9 +87,9 @@ They fight for survival from the elements and each other as they uncover the mys
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title >
       CHASING THE HORIZON
@@ -91,9 +100,9 @@ when the old man tells him the story of the 1912 failed parachute jump of Franz 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       POLYBIUS
@@ -104,9 +113,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title >
       THE LAST INDIAN WAR
@@ -116,9 +125,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       BONJOUR L.A.
@@ -128,9 +137,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       CHARLOTTE SOMETIMES
@@ -140,9 +149,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       MUSKOGEE
@@ -152,9 +161,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       THE TALLEST DARKEST LEADING MAN IN HOLLYWOOD
@@ -164,9 +173,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
 
-<br>
 
-<mat-expansion-panel [hideToggle]="true">
+
+<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title>
       TRENDING
@@ -175,19 +184,22 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
+</div>
 
-  </body>
+  
  
   
   </mat-sidenav-content>
   
+  
   <mat-sidenav   position="end" [opened]="!mobileQuery.matches" class="sidenav-end" #snavEnd [mode]="mobileQuery.matches ? 'push' : 'side'"
->             
-              
+>
+             
+ <div fxLayout="column" [style.marginTop.px]="30" [style.marginLeft.px]="20" [style.marginRight.px]="20">            
 <mat-card class="example-card">
   <img mat-card-image src="https://storage.googleapis.com/interdependent.studio/sample-event-image.png" alt="Photo of a premiere event">
   <mat-card-content>
-    <H3 class="Bold">OCTOBER, 12</H3>
+    <H3 fxLayoutAlign="center" class="Bold">OCTOBER, 12</H3>
     <p class="Light">
       This is a really cool event that you should attend. It will be like totally awesome man. Really, you should come. Be there or be square my brotha. Or not. Whatevs broseph.
     </p>
@@ -315,9 +327,13 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 </mat-card>
 
 <br><br>
+</div> 
      
     </mat-sidenav>
-  </mat-sidenav-container>
+  
+  
+  
+</mat-sidenav-container>
   
   
   
