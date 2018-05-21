@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material';
+
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -50,4 +53,20 @@ import { environment } from '../environments/environment';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+        'role-select',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/img/roles/role-select.svg'));
+    
+        iconRegistry.addSvgIcon(
+          'timeline',
+          sanitizer.bypassSecurityTrustResourceUrl('assets/icons/Timeline.svg'));
+
+          iconRegistry.addSvgIcon(
+            'stepper',
+            sanitizer.bypassSecurityTrustResourceUrl('assets/icons/icon-stepper.svg'));
+  }
+  
+
+}

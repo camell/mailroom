@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="30px" viewBox="0 0 34 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Stepper menu open</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Stepper-menu-open" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,9 L30,9 L30,12 L7,12 L7,9 Z M7,15 L30,15 L30,18 L7,18 L7,15 Z M7,21 L30,21 L30,24 L7,24 L7,21 Z" id="stepper-menu" fill="#FFFFFF"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="9" width="3" height="3"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="15" width="3" height="3"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="1" y="21" width="3" height="3"></rect>
+        <path d="M33,1.9505946 C25.4212766,8.9667475 19.8893617,17.4905035 15.5744681,27 C12.6978723,23.5209159 9.87659574,20.0418318 7,16.5627478 C7.2212766,16.2728241 7.44255319,15.9829004 7.71914894,15.634992 C9.8212766,16.9106562 11.9787234,18.1283356 14.0808511,19.4039998 C14.3574468,18.9981066 14.6340426,18.5922135 14.9106383,18.2443051 C17.8425532,14.1273889 21.0510638,10.3583811 24.6468085,6.87929705 C26.9148936,4.67587714 29.4042553,2.70439616 32.0595745,1.08082358 C32.2255319,0.964854114 32.3361702,0.964854114 32.4468085,1.13880832 C32.612766,1.42873199 32.7787234,1.66067093 33,1.9505946 L33,1.9505946 Z" id="Path" stroke="#000000" fill="#FFFFFF"></path>
+    </g>
+</svg>
