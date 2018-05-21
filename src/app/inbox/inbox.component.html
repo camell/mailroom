@@ -1,6 +1,3 @@
-
-
-
 <mat-toolbar color="primary" layout="row" style="position: fixed;">
   <button mat-icon-button (click)="snavStart.toggle()"><mat-icon>menu</mat-icon></button>
   
@@ -21,10 +18,13 @@
   
   <mat-vertical-stepper>
   <mat-step label="Step 1">
-    Content 1
+    Complete step 1
   </mat-step>
   <mat-step label="Step 2">
-    Content 2
+    Complete step 2
+  </mat-step>
+  <mat-step label="Step 3">
+    Complete step 3
   </mat-step>
 </mat-vertical-stepper>
   
@@ -33,7 +33,7 @@
   <mat-sidenav-content>
   <body>
   
-  <p>FOR YOUR CONSIDERATION</p>
+  <p class="Regular">FOR YOUR CONSIDERATION</p>
   
   <mat-expansion-panel [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
@@ -182,7 +182,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   </mat-sidenav-content>
   
   <mat-sidenav   position="end" [opened]="!mobileQuery.matches" class="sidenav-end" #snavEnd [mode]="mobileQuery.matches ? 'push' : 'side'"
-                 [fixedInViewport]="mobileQuery.matches"  fixedTopGap="56">             
+>             
               
 <mat-card class="example-card">
   <img mat-card-image src="https://storage.googleapis.com/interdependent.studio/sample-event-image.png" alt="Photo of a premiere event">
