@@ -1,7 +1,7 @@
 
 
 
-<mat-toolbar color="primary" class="example-toolbar">
+<mat-toolbar color="primary" layout="row" style="position: fixed;">
   <button mat-icon-button (click)="snavStart.toggle()"><mat-icon>menu</mat-icon></button>
   
   <mat-icon svgIcon="Catalyst" class="red-role-icon"></mat-icon>
@@ -14,8 +14,8 @@
   <span><button mat-icon-button (click)="snavEnd.toggle()"><mat-icon>menu</mat-icon></button></span>
 </mat-toolbar>
 
-<mat-sidenav-container class="example-sidenav-container">
-						[style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+<mat-sidenav-container fullscreen class="example-sidenav-container"
+[style.marginTop.px]="56">
   <mat-sidenav position="start" [fixedInViewport]="false" class="sidenav-start" #snavStart [mode]="mobileQuery.matches ? 'push' : 'side'"
                  fixedInViewport fixedTopGap="60">
   
@@ -33,7 +33,7 @@
   <mat-sidenav-content>
   <body>
   
-  <mat-toolbar><p>FOR YOUR CONSIDERATION</p></mat-toolbar>
+  <p>FOR YOUR CONSIDERATION</p>
   
   <mat-expansion-panel [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
@@ -181,8 +181,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   
   </mat-sidenav-content>
   
-  
-  <mat-sidenav   position="end" [opened]="!mobileQuery.matches" class="sidenav-end" #snavEnd [mode]="mobileQuery.matches ? 'over' : 'side'"
+  <mat-sidenav   position="end" [opened]="!mobileQuery.matches" class="sidenav-end" #snavEnd [mode]="mobileQuery.matches ? 'push' : 'side'"
                  [fixedInViewport]="mobileQuery.matches"  fixedTopGap="56">             
               
 <mat-card class="example-card">
