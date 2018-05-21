@@ -1,5 +1,7 @@
 @import '~@angular/material/theming';
 
+@include mat-core();
+
 $mailroom-theme-primary: mat-palette($mat-red);
 $mailroom-theme-accent:  mat-palette($mat-red, A200, A100, A400);
 
@@ -22,5 +24,5 @@ $custom-light-typography: mat-typography-config(
 );
 
 // Override typography for all Angular Material, including mat-base-typography and all components.
+
 @include angular-material-typography($custom-typography);
-@include mat-core();
