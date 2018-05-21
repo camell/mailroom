@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="21px" viewBox="0 0 18 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_notifications_none</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,22 C13.1,22 14,21.1 14,20 L10,20 C10,21.1 10.9,22 12,22 L12,22 Z M18,16 L18,11 C18,7.93 16.37,5.36 13.5,4.68 L13.5,4 C13.5,3.17 12.83,2.5 12,2.5 C11.17,2.5 10.5,3.17 10.5,4 L10.5,4.68 C7.64,5.36 6,7.92 6,11 L6,16 L4,18 L4,19 L20,19 L20,18 L18,16 L18,16 Z M16,17 L8,17 L8,11 C8,8.52 9.51,6.5 12,6.5 C14.49,6.5 16,8.52 16,11 L16,17 L16,17 Z" id="path-1"></path>
+    </defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_notifications_none" transform="translate(-3.000000, -2.000000)">
+            <g id="Icon-24px">
+                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                <g id="Shape" stroke-width="0.5">
+                    <use stroke="#000000" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#FF0000" d="M12,22.25 C10.7619288,22.25 9.75,21.2380712 9.75,20 L9.75,19.75 L14.25,19.75 L14.25,20 C14.25,21.2380712 13.2380712,22.25 12,22.25 Z M18.25,15.8964466 L20.1767767,17.8232233 L20.25,18 L20.25,19.25 L3.75,19.25 L3.75,18 L3.8232233,17.8232233 L5.75,15.8964466 L5.75,11 C5.75,7.78924452 7.46158852,5.24236138 10.25,4.48567803 L10.25,4 C10.25,3.03192881 11.0319288,2.25 12,2.25 C12.9680712,2.25 13.75,3.03192881 13.75,4 L13.75,4.48552557 C16.5412822,5.2407838 18.25,7.79030524 18.25,11 L18.25,15.8964466 Z M15.75,16.75 L15.75,11 C15.75,8.53301706 14.2431865,6.75 12,6.75 C9.7568135,6.75 8.25,8.53301706 8.25,11 L8.25,16.75 L15.75,16.75 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
