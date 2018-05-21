@@ -56,6 +56,10 @@ import { environment } from '../environments/environment';
 export class AppModule { 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
+      'stepper',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/icon-stepper.svg'));
+    
+    iconRegistry.addSvgIcon(
         'role-select',
         sanitizer.bypassSecurityTrustResourceUrl('assets/img/roles/role-select.svg'));
     
@@ -64,8 +68,8 @@ export class AppModule {
           sanitizer.bypassSecurityTrustResourceUrl('assets/icons/Timeline.svg'));
 
           iconRegistry.addSvgIcon(
-            'stepper',
-            sanitizer.bypassSecurityTrustResourceUrl('assets/icons/icon-stepper.svg'));
+            'notifications',
+            sanitizer.bypassSecurityTrustResourceUrl('assets/icons/notification.svg'));
   }
   
 
