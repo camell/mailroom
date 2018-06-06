@@ -13,8 +13,9 @@
  <span class="fill-remaining-space"></span>
  
  <div style="transform: scale(1.25, 1.25);" [style.marginTop.px]="20"><mat-icon svgIcon="notifications"></mat-icon></div>
- <div  style="transform: scale(1.5, 1.5);" [style.marginLeft.px]="15" [style.marginRight.px]="25" 
- [style.marginTop.px]="20"><mat-icon  svgIcon="role-select" class="red-role-icon"></mat-icon></div>
+ <div   [style.marginLeft.px]="15" [style.marginRight.px]="25">
+ <button mat-mini-fab>
+ <mat-icon  svgIcon="role-select" class="red-role-icon"></mat-icon></button></div>
  <div><button mat-icon-button (click)="snavEnd.toggle()"><mat-icon style="transform: scale(1.25, 1.25);">calendar_view_day</mat-icon></button></div>
 </mat-toolbar-row>
 </mat-toolbar>
@@ -40,9 +41,25 @@
   </mat-sidenav>
   
   <mat-sidenav-content>
-  <div fxLayout="row">
-  <p fxFlexOffset="30px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR CONSIDERATION</p>
+  <div fxLayout="row" [style.marginTop.px]="20" [style.marginBottom.px]="10" [style.marginLeft.px]="20" [style.marginRight.px]="20">
+    <mat-card class="example-card" fxShow.sm="true"  fxShow.gt-md="true" fxShow="true" >
+      <img mat-card-image src="/assets/icons/icon-the-deal.svg" alt="The deal poster image"> 
+    </mat-card>
+    <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
+        <img mat-card-image src="/assets/icons/icon-the-deal-SPRING.svg" alt="The deal poster image"> 
+      </mat-card>
+      <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
+          <img mat-card-image src="/assets/icons/icon-the-deal-SUMMER.svg" alt="The deal poster image"> 
+        </mat-card>
+
+        <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
+            <img mat-card-image src="/assets/icons/icon-the-deal-FALL.svg" alt="The deal poster image"> 
+          </mat-card>
   </div>
+
+    <div fxLayout="row">
+        <p fxFlexOffset="30px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR CONSIDERATION</p>
+        </div>
   
   <div fxLayout="column" [style.marginTop.px]="0" [style.marginLeft.px]="20" [style.marginRight.px]="20">
   

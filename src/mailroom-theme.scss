@@ -5,7 +5,7 @@
 $mailroom-theme-primary: mat-palette($mat-red);
 $mailroom-theme-accent:  mat-palette($mat-red, A200, A100, A400);
 
-$mailroom-theme-warn: mat-palette($mat-black);
+$mailroom-theme-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $mailroom-theme: mat-light-theme($mailroom-theme-primary, $mailroom-theme-accent, $mailroom-theme-warn);
