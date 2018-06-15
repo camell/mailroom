@@ -4,27 +4,24 @@
       <mat-toolbar-row>
  
 <div><button mat-icon-button (click)="snavStart.toggle()">
-<mat-icon style="transform: scale(1, 1);">menu</mat-icon></button></div>
+<mat-icon >menu</mat-icon></button></div>
   
 
-<div [style.marginLeft.px]="15" class="Light" style="transform: scale(1.25, 1.25);" >mailroom</div>  
+<div [style.marginLeft.px]="15" class="Light">mailroom</div>  
 
 <!-- This fills the remaining space of the current row -->
  <span class="fill-remaining-space"></span>
- 
- <div style="transform: scale(1.25, 1.25);" [style.marginTop.px]="20"><mat-icon svgIcon="notifications"></mat-icon></div>
- <div   [style.marginLeft.px]="15" [style.marginRight.px]="25">
- <button mat-mini-fab>
- <mat-icon  svgIcon="role-select" class="red-role-icon"></mat-icon></button></div>
- <div><button mat-icon-button (click)="snavEnd.toggle()"><mat-icon style="transform: scale(1.25, 1.25);">calendar_view_day</mat-icon></button></div>
+ <div><button mat-icon-button><mat-icon style="transform: scale(1,1)">notifications_none</mat-icon></button></div>
+ <div [style.marginLeft.px]="10" [style.marginRight.px]="25">
+ <button mat-icon-button style="background-color: #000000" class="mat-elevation-z9"><mat-icon svgIcon="role-select"></mat-icon></button></div>
+ <div><button mat-icon-button (click)="snavEnd.toggle()"><mat-icon >calendar_view_day</mat-icon></button></div>
 </mat-toolbar-row>
 </mat-toolbar>
 </div>
 
 <mat-sidenav-container fullscreen class="example-sidenav-container"
 [style.marginTop.px]="56">
-  <mat-sidenav position="start" [fixedInViewport]="false" class="sidenav-start" #snavStart [mode]="mobileQuery.matches ? 'push' : 'side'"
-  >
+  <mat-sidenav position="start" [fixedInViewport]="false" class="sidenav-start" #snavStart [mode]="mobileQuery.matches ? 'push' : 'side'">
   
   <mat-vertical-stepper>
   <mat-step label="Step 1">
@@ -39,31 +36,32 @@
 </mat-vertical-stepper>
   
   </mat-sidenav>
-  
   <mat-sidenav-content>
-  <div fxLayout="row" [style.marginTop.px]="20" [style.marginBottom.px]="10" [style.marginLeft.px]="20" [style.marginRight.px]="20">
-    <mat-card class="example-card" fxShow.sm="true"  fxShow.gt-md="true" fxShow="true" >
-      <img mat-card-image src="/assets/icons/icon-the-deal.svg" alt="The deal poster image"> 
+  
+    <div fxLayout="row" [style.marginTop.px]="20" [style.marginBottom.px]="10" [style.marginLeft.px]="20" [style.marginRight.px]="20">
+    <mat-card style="max-width: 500px" fxShow.sm="true"  fxShow.gt-md="true" fxShow="true" [style.marginRight.px]="5">
+      <img mat-card-image src="/assets/icons/icon-the-deal.png" alt="The deal poster image"> 
     </mat-card>
-    <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
+    <mat-card style="max-width: 500px" fxShow.sm="false"  fxShow.lg="false" fxShow="false" [style.marginLeft.px]="5" [style.marginRight.px]="5">
         <img mat-card-image src="/assets/icons/icon-the-deal-SPRING.svg" alt="The deal poster image"> 
       </mat-card>
-      <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
+      <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="false" fxShow="false" [style.marginLeft.px]="5" [style.marginRight.px]="5">
           <img mat-card-image src="/assets/icons/icon-the-deal-SUMMER.svg" alt="The deal poster image"> 
         </mat-card>
 
-        <mat-card class="example-card" fxShow.sm="false"  fxShow.gt-md="true" fxShow="false" >
-            <img mat-card-image src="/assets/icons/icon-the-deal-FALL.svg" alt="The deal poster image"> 
-          </mat-card>
+          
   </div>
 
-    <div fxLayout="row">
-        <p fxFlexOffset="30px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR CONSIDERATION</p>
+
+  <div [style.marginBottom.px]="30">
+    <div fxLayout.sm="row" [style.marginTop.px]="0">
+        <p fxFlexOffset="50px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR CONSIDERATION</p>
         </div>
+  <div [style.marginBottom.px]="20" [style.marginLeft.px]="20" [style.marginRight.px]="20">
   
-  <div fxLayout="column" [style.marginTop.px]="0" [style.marginLeft.px]="20" [style.marginRight.px]="20">
+    <div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column"  fxLayout.sm="column"  fxLayout.md="column">
   
-<mat-expansion-panel [hideToggle]="true">
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       AMERICA'S GUEST
@@ -79,7 +77,7 @@ Belushi ‘America’s Guest.’”</H3>
 <a mat-button >CONSIDER</a>
 <a mat-button>CONTRIBUTE</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       WASTED SPACE
@@ -89,7 +87,11 @@ Belushi ‘America’s Guest.’”</H3>
 </p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+</div>
+<div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       SERE
@@ -99,7 +101,7 @@ Belushi ‘America’s Guest.’”</H3>
 They fight for survival from the elements and each other as they uncover the mystery of their fatal imprisonment.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       CHASING THE HORIZON
@@ -109,7 +111,11 @@ They fight for survival from the elements and each other as they uncover the mys
 when the old man tells him the story of the 1912 failed parachute jump of Franz Reichelt.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+</div>
+<div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       POLYBIUS
@@ -119,7 +125,8 @@ when the old man tells him the story of the 1912 failed parachute jump of Franz 
 through video games. But a bunch of smart, misfit kids set about uncovering the conspiracy and saving the town.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       THE LAST INDIAN WAR
@@ -128,7 +135,11 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>An epic coming-of-age historical drama about the forced relocation of Native American children and the birth of modern football.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+</div>
+
+<div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       BONJOUR L.A.
@@ -137,7 +148,8 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>Romantic comedy follows a group of French tourists for one week in L.A. Their tour guide, a frustrated actress, breaks the unwritten rule and falls in love with one customers. A love poem to L.A. </p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       CHARLOTTE SOMETIMES
@@ -146,7 +158,11 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>Out of the limelight for 25 years, a fiery actress turned barfly is about to mount a comeback when her arch nemesis and the love of her life shows up on her doorstep.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+</div>
+<div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       MUSKOGEE
@@ -155,7 +171,8 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>Three clueless filmmakers attend a film festival in rural Oklahoma, but quickly come to realize there's something off about this town - will they realize what's going on in time?</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       THE TALLEST DARKEST LEADING MAN IN HOLLYWOOD
@@ -164,7 +181,11 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>It's the hard-to-believe but never-the-less true story of Hollywood's first blockbuster, King Kong, and the unlikely love triangle...</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
-<mat-expansion-panel [hideToggle]="true" fxFlexOffset="15px">
+
+</div>
+<div fxLayoutGap="10px" fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
   <mat-expansion-panel-header [collapsedHeight]="'75px'">
     <mat-panel-title fxLayoutAlign="center">
       TRENDING
@@ -173,11 +194,217 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
 <a mat-button>CONSIDER</a>
 </mat-expansion-panel>
+
+    <mat-expansion-panel  fxFlex="50" [hideToggle]="true">
+      <mat-expansion-panel-header [collapsedHeight]="'75px'">
+        <mat-panel-title fxLayoutAlign="center">
+          TRENDING
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+      <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
+    <a mat-button>CONSIDER</a>
+    </mat-expansion-panel>
+    </div>
+  </div>
+
+    <div style="background-color: #FFFFFF">
+        <br>
+        <br>
+        </div>
+
+<div [style.marginBottom.px]="30">
+    <div fxLayout.sm="row" [style.marginTop.px]="10">
+        <p fxFlexOffset="50px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR PREVIEW CONSIDERATION</p>
+        </div>
+  
+  <div [style.marginBottom.px]="20">
+      <div [style.marginTop.px]="0" [style.marginBottom.px]="30" [style.marginLeft.px]="20" [style.marginRight.px]="20">
+    <div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+  
+<mat-expansion-panel  fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      AMERICA'S GUEST
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <H3 class="Light">“When filming a movie on location, John Belushi had a habit
+of wandering off-set to a random house of a complete
+stranger. He would knock on their front door, invite himself
+in, and then ask for something to eat.
+This practice prompted Dan Aykroyd to affectionately dub
+Belushi ‘America’s Guest.’”</H3>
+<a mat-button >PASS</a>
+<a mat-button >CONSIDER</a>
+<a mat-button>CONTRIBUTE</a>
+</mat-expansion-panel>
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      WASTED SPACE
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>What happens when aliens abduct a young junkie who gets them hooked on drugs? A whimsical and terrifying urban adventure. An unlikely family of denizens tries to make it through this surreal trip.
+</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
 </div>
-  
+<div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      SERE
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>A disparate group of strangers is abandoned in the desert locked in the trailer of a semi-truck. 
+They fight for survival from the elements and each other as they uncover the mystery of their fatal imprisonment.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      CHASING THE HORIZON
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>An anti-social, has-been writer is forced to write a biography of an old man. The writer confronts his disillusionment
+when the old man tells him the story of the 1912 failed parachute jump of Franz Reichelt.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+</div>
+<div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      POLYBIUS
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>During the video arcade culture of the 1980s, otherworldly forces contrive to control a community by programming kids 
+through video games. But a bunch of smart, misfit kids set about uncovering the conspiracy and saving the town.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      THE LAST INDIAN WAR
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>An epic coming-of-age historical drama about the forced relocation of Native American children and the birth of modern football.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+</div>
+
+<div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      BONJOUR L.A.
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>Romantic comedy follows a group of French tourists for one week in L.A. Their tour guide, a frustrated actress, breaks the unwritten rule and falls in love with one customers. A love poem to L.A. </p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      CHARLOTTE SOMETIMES
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>Out of the limelight for 25 years, a fiery actress turned barfly is about to mount a comeback when her arch nemesis and the love of her life shows up on her doorstep.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+</div>
+<div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      MUSKOGEE
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>Three clueless filmmakers attend a film festival in rural Oklahoma, but quickly come to realize there's something off about this town - will they realize what's going on in time?</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      THE TALLEST DARKEST LEADING MAN IN HOLLYWOOD
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>It's the hard-to-believe but never-the-less true story of Hollywood's first blockbuster, King Kong, and the unlikely love triangle...</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+</div>
+<div fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column">
+
+<mat-expansion-panel fxFlex="50" [hideToggle]="true">
+  <mat-expansion-panel-header [collapsedHeight]="'75px'">
+    <mat-panel-title fxLayoutAlign="center">
+      TRENDING
+    </mat-panel-title>
+    </mat-expansion-panel-header>
+  <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
+<a mat-button>CONSIDER</a>
+</mat-expansion-panel>
+
+    <mat-expansion-panel fxFlex="50" [hideToggle]="true">
+      <mat-expansion-panel-header [collapsedHeight]="'75px'">
+        <mat-panel-title fxLayoutAlign="center">
+          TRENDING
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+      <p>Video of an epic fail marriage proposal goes viral and turns the unlucky in love Ray into an Internet darling sought out by thousands of women.</p>
+    <a mat-button>CONSIDER</a>
+    </mat-expansion-panel>
+    </div>
+  </div>
+  </div>
+
+  <div style="background-color: #FFFFFF">
+      <br>
+      <br>
+      </div>
+
+<div [style.marginLeft.px]="20" [style.marginRight.px]="20">
+  <div fxLayout.sm="row" [style.marginTop.px]="10">
+      <p fxFlexOffset="50px" class="Light" style="color:#333333; letter-spacing: 1px;">FOR YOUR FEATURE CONSIDERATION</p>
+      </div>
+
+  <div  fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="center">
+      <a mat-button style="max-width: 700px" [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_NbyNW.png?alt=media&token=508714ca-b7f4-4862-b217-d9d4dd5be1e4)'" style="height: 75px" fxFlex="50" mat-raised-button></a>
+      <a mat-button style="max-width: 700px" [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_King_Kong.png?alt=media&token=25c1e54f-fd63-4b3a-8792-4987b5337206)'" style="height: 75px" fxFlex="50" mat-raised-button></a> 
+      </div> 
+
+      <div  fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="center">
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_Godfather.png?alt=media&token=59eb6b36-09bb-491d-aa06-9597e8f9d1fa)'" style="height: 75px" fxFlex="50" mat-raised-button></a>
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_Sunset_BLVD.png?alt=media&token=4e438229-3ce8-4e25-803e-fd439961cec9)'" style="height: 75px" fxFlex="50" mat-raised-button></a> 
+      </div>
+
+      <div  fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="center">
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_JAWS.png?alt=media&token=47be3f97-a1e2-42db-82b8-dc28bacbbe0e)'" style="height: 75px" fxFlex="50" mat-raised-button></a>
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_ET.png?alt=media&token=731d29eb-3570-4b21-808f-871e28561da7)'" style="height: 75px" fxFlex="50" mat-raised-button></a> 
+      </div>
+
+      <div  fx.Layout.lg="row" fxLayout.xs="column" fxLayout.sm="column" fxLayout.md="column" fxLayoutAlign="center">
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_Chinatown.png?alt=media&token=95a4519a-859f-4964-b2a5-a36bf01fdacc)'" style="height: 75px" fxFlex="50" mat-raised-button></a> 
+          <a mat-button [style.backgroundImage]="'url(https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/FEATURE_WOZ.png?alt=media&token=a5ad2ced-d605-4579-a62f-ad6388a11fff)'" style="height: 75px" fxFlex="50" mat-raised-button></a>
+        </div>
+
+</div>
+    
+</div>
+</div>
+
   </mat-sidenav-content>
-  
-  
+
   <mat-sidenav   position="end" [opened]="!mobileQuery.matches" class="sidenav-end" #snavEnd [mode]="mobileQuery.matches ? 'push' : 'side'"
 >
              
@@ -187,31 +414,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <mat-card-content>
     <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
     <p class="Light" style="color:#666666;">
-        Reading period. For Readers only. Here begins the Interdependent mailroom sorting process; matching readers to recommendations for Executive Director and Catalyst consideration of signed screenplay submissions.
-    </p>
-  </mat-card-content>
-</mat-card>
-
-<br><br>
-
-<mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_1-2.png?alt=media&token=59282536-4c74-4d15-bf32-5d05e1bd7478" alt="Photo of a premiere event">
-  <mat-card-content>
-      <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
-      <p class="Light" style="color:#666666;">
-          Reading required. Never read a screenplay before? Think you know better? Discover the requirements for Reader participation in the Interdependent development process and uncover just what guides this quest for story gold.
-    </p>
-  </mat-card-content>
-</mat-card>
-
-<br><br>
-
-<mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_1-3.png?alt=media&token=be6de167-6884-4c51-b76e-f2f98d84a9df" alt="Photo of a premiere event">
-  <mat-card-content>
-      <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
-      <p class="Light" style="color:#666666;">
-          Reading rainbow. Join a discussion on Interdependent’s submission story and understand how the process attempts not to color the impression of potential contributors with the identity of the screenplay’s author(s).
+        Here begins the mailroom sorting process; matching readers to recommendations for Executive Director and Catalyst consideration of signed screenplay submissions.
     </p>
   </mat-card-content>
 </mat-card>
@@ -223,35 +426,11 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
       <p class="Light" style="color:#666666;">
-          End reading period. Executive Producers first look. It begins with a story well told…and goes nowhere without the support of  Interdependent Executive Producers. Learn the ABC’s of a role you may think you know but has never existed.
+          End reading period. Executive Producers first look. It begins with a story well told…and goes nowhere without the support of Interdependent Executive Producers. Learn the ABC’s of a role you may think you know but has never before existed.
     </p>
   </mat-card-content>
 </mat-card>
 
-<br><br>
-
-<mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_2-2.png?alt=media&token=7d8ec987-b482-41e5-a4ab-af7baa5ac577" alt="Photo of a premiere event">
-  <mat-card-content>
-      <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
-      <p class="Light" style="color:#666666;">
-          Equal pay. Here today. Learn how to love it or leave it as you understand the deal and how it applies to you. Whether pissed or pleased come to know how Interdependent terms and conditions are enacted with an eye toward equanimity.
-    </p>
-  </mat-card-content>
-</mat-card>
-
-<br><br>
-
-<mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_2-3.png?alt=media&token=27ba6fd5-508d-4990-90ea-1bba71dd5ae8" alt="Photo of a premiere event">
-  <mat-card-content>
-      <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
-      <p class="Light" style="color:#666666;">
-          Celebrate 100+ years of Hollywood cinema with a spin on AFI’s top 100 films; hear about diversity in the context of Season 0 then look ahead to see where Interdependent shirks and embraces this monumental responsibility.
-    </p>
-  </mat-card-content>
-</mat-card>
- 
 <br><br>
 
 <mat-card class="example-card">
@@ -259,7 +438,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
     <p  class="Light" style="color:#666666;">
-        Passing GO. Interdependent previews are uniquely produced prior to the feature presentation. Executive Producers hangout with Directors and hear their story for bringing the script to the screen, and rubber meets road.
+        Passing GO. Previews are uniquely produced prior to the feature presentation. Executive Producers hangout with Directors and hear their story for bringing the script to the screen, and rubber meets road.
     </p>
   </mat-card-content>
 </mat-card>
@@ -267,7 +446,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <br><br>
 
 <mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_4-1.png?alt=media&token=8d7fa88e-caa9-4af6-a302-eb6e1e3ccbde" alt="Photo of a premiere event">
+  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Preview_DAY_1.png?alt=media&token=c41c5503-1158-45a6-80ca-de3a1f86dee8" alt="Photo of a premiere event">
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
       <p fxLayoutAlign="center" class="Light" style="color:#666666;">
@@ -279,7 +458,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <br><br>
 
 <mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_5-1.png?alt=media&token=3d792ee3-3957-40f9-994b-8f2f1fa368b7" alt="Photo of a premiere event">
+  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_5-1.png?alt=media&token=42b89371-be43-4caf-908f-d66e7cfcb80c" alt="Photo of a premiere event">
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
       <p fxLayoutAlign="center" class="Light" style="color:#666666;">
@@ -291,7 +470,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <br><br>
 
 <mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_6-1.png?alt=media&token=ab71f00a-e769-48cf-bba4-374757299f65" alt="Photo of a premiere event">
+  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/GO_Feature.png?alt=media&token=03bce4e0-42d1-4c05-9460-d329f5f6dc79" alt="Photo of a premiere event">
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
       <p class="Light" style="color:#666666;">
@@ -303,7 +482,7 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 <br><br>
 
 <mat-card class="example-card">
-  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_7-1.png?alt=media&token=fdc09ef1-c59a-435a-84bb-5644b4d5e91a" alt="Photo of a premiere event">
+  <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Feature_DAY_1.png?alt=media&token=f893b8bd-4e09-43f7-95e8-81ff7f42c64f" alt="Photo of a premiere event">
   <mat-card-content>
       <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
       <p class="Light" style="color:#666666;">
@@ -313,21 +492,9 @@ through video games. But a bunch of smart, misfit kids set about uncovering the 
 </mat-card>
 
 <br><br>
-
-<mat-card class="example-card">
-    <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Date_8-1.png?alt=media&token=a3605c07-d666-4be1-8920-1a80b533bd52" alt="Photo of a premiere event">
-    <mat-card-content>
-        <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
-        <p class="Light" style="color:#666666;">
-        This is a really cool event that you should attend. It will be like totally awesome man. Really, you should come. Be there or be square my brotha. Or not. Whatevs broseph.
-      </p>
-    </mat-card-content>
-  </mat-card>
-  
-  <br><br>
 
   <mat-card class="example-card">
-      <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Premiere_Rear_Window.png?alt=media&token=523344b0-486b-4774-a08d-b05a12ba81ea" alt="Photo of a premiere event">
+      <img mat-card-image src="https://firebasestorage.googleapis.com/v0/b/interdependent-studio-mailroom.appspot.com/o/Psycho_Poster.png?alt=media&token=a255e4d3-97aa-4d8a-916a-f5e469bf5d56" alt="Photo of a premiere event">
       <mat-card-content>
           <H3 fxLayoutAlign="center" class="Bold">TBD</H3>
           <p class="Light" style="color:#666666;">
