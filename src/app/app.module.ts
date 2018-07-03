@@ -20,6 +20,7 @@ import { SwiperModule, SwiperConfigInterface,
   SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TwentythreeComponent } from './twentythree/twentythree.component';
 
   const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     observer: true,
@@ -34,7 +35,8 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     InboxComponent,
-    ScreenplaySwiperComponent
+    ScreenplaySwiperComponent,
+    TwentythreeComponent
   ],
   imports: [
     SwiperModule,
